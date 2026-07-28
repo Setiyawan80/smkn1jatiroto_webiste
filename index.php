@@ -62,8 +62,11 @@ mampu berkompetisi di dunia global. Menyelenggarakan pendidikan kejuruan unggula
                     <a href="#kegiatan" class="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors">Kegiatan</a>
                     <a href="#prestasi" class="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors">Prestasi</a>
                     <a href="#pengumuman" class="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors">Pengumuman</a>
-                    <a href="pengumuman.html" class="text-sm font-medium bg-orange-900 rounded-full p-2 text-gray-100 hover:text-blue-200 transition-colors">Pengumuman SPMB</a>
-                    <a href="https://spmb.jatengprov.go.id/" class="bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition">PPDB 2026 JATENG</a>
+                    <!-- <a href="pengumuman.html" class="text-sm font-medium bg-orange-900 rounded-full p-2 text-gray-100 hover:text-blue-200 transition-colors">Pengumuman SPMB</a> -->
+                    <a href="https://provjateng.org/" class="bg-green-600 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-green-700 transition flex gap-3">
+                        <img src="img/logo-provinsi.png" alt="Logo Jateng" class="w-5 h-5 ">
+                        Provinsi Jateng
+                    </a>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -118,6 +121,53 @@ mampu berkompetisi di dunia global.
                 </div>
             </div>
         </div>
+    </section>
+
+    <section id="headline-news" class="py-8 px-4 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row bg-white rounded-[2rem] overflow-hidden shadow-sm border border-gray-100 app-card">
+            
+            <!-- Bagian Gambar -->
+            <div class="md:w-1/2 relative h-64 md:h-auto">
+                <!-- Ganti src dengan gambar berita asli Anda -->
+                <img src="picture/foto1.jpeg" alt="Rekapitulasi Realisasi Penggunaan Dana BOSP" class="absolute inset-0 w-full h-full object-cover">
+                <!-- Efek gradasi hitam transparan (hanya terlihat di mobile agar gambar lebih dramatis) -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent md:hidden"></div>
+            </div>
+            
+            <!-- Bagian Konten/Teks -->
+            <div class="md:w-1/2 p-8 md:p-10 flex flex-col justify-center">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="bg-red-50 text-red-600 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-red-100">Berita Utama</span>
+                    <span class="text-gray-400 text-sm font-medium">Hari ini</span>
+                </div>
+                
+                <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 mb-4 leading-tight hover:text-blue-600 transition-colors cursor-pointer">
+                    Wujudkan Transparansi, SMKN 1 Jatiroto Laporkan Realisasi Penggunaan Dana BOSP Tahap 1 Tahun 2026
+                </h2>
+                
+                <!-- line-clamp-3 digunakan agar teks terpotong otomatis jika terlalu panjang -->
+                <p class="text-gray-500 text-base mb-8 leading-relaxed line-clamp-3">
+                    WONOGIRI – Sebagai bentuk komitmen terhadap transparansi dan akuntabilitas pengelolaan keuangan sekolah (Why), SMK Negeri 1 Jatiroto, Kabupaten Wonogiri (Who/Where) telah melaporkan Dokumen Rekapitulasi Realisasi Penggunaan Dana Bantuan Operasional Satuan Pendidikan (BOSP) Reguler Tahap 1 Tahun Anggaran 2026 (What). Laporan keuangan ini mencakup pencatatan operasional sekolah selama periode semester pertama, yakni dari tanggal 1 Januari 2026 hingga 30 Juni 2026 (When).
+
+                    Berdasarkan dokumen resmi yang telah ditandatangani oleh Kepala SMKN 1 Jatiroto, Suhari, S.Pd., M.Pd., beserta Bendahara Kegiatan, Indrayati, S.Pd., M.Ak. tersebut (Who), total penerimaan dana BOSP pada periode ini tercatat sebesar Rp 795.145.000. Dari jumlah tersebut, sekolah telah merealisasikan atau menggunakan dana sebesar Rp 650.890.250 untuk menunjang berbagai kegiatan pendidikan, sehingga menyisakan saldo akhir periode sebesar Rp 144.254.750 (What/How).
+
+                    Adapun rincian penggunaan anggaran secara terstruktur dialokasikan untuk memenuhi delapan Standar Nasional Pendidikan (How). Serapan anggaran tertinggi dialokasikan pada Standar Proses dengan total mencapai Rp 194.416.800. Anggaran pada standar ini paling banyak dikucurkan untuk pembiayaan pelaksanaan kegiatan pembelajaran dan ekstrakurikuler siswa yang menelan dana sebesar Rp 152.977.500.
+
+                    Selain Standar Proses, alokasi anggaran yang cukup besar juga disalurkan pada Standar Pengelolaan yang mencapai angka Rp 183.165.150, di mana sebagian besarnya digunakan untuk pelaksanaan administrasi kegiatan sekolah (Rp 118.825.150) serta pembiayaan langganan daya dan jasa (Rp 64.340.000). Untuk memastikan kenyamanan belajar siswa, SMKN 1 Jatiroto juga memaksimalkan Standar Sarana dan Prasarana dengan anggaran Rp 166.922.750, yang secara spesifik difokuskan pada pemeliharaan sarana prasarana sekolah dan penyediaan alat multimedia pembelajaran (How).
+
+                    Pelaporan secara terperinci ini bersumber dari anggaran BOS Reguler Revisi Anggaran Ke-2. Dengan dirilisnya rekapitulasi ini, pihak sekolah berharap dapat terus memberikan pelayanan pendidikan dan peningkatan kompetensi keahlian yang maksimal, sekaligus menjaga kepercayaan masyarakat melalui pengelolaan dana operasional sekolah yang tepat sasaran, akuntabel, dan transparan.
+                </p>
+                
+                <div>
+                    <a href="#" class="inline-flex items-center justify-center bg-blue-600 text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-md shadow-blue-200 hover:bg-blue-700 hover:-translate-y-0.5 transition-all">
+                        Baca Selengkapnya
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        
     </section>
 
     <!-- Pengumuman (App Store Editor's Choice Style) -->
