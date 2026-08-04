@@ -129,7 +129,7 @@ mampu berkompetisi di dunia global.
             <!-- Bagian Gambar -->
             <div class="md:w-1/2 relative h-64 md:h-auto">
                 <!-- Ganti src dengan gambar berita asli Anda -->
-                <img src="picture/foto1.jpeg" alt="Rekapitulasi Realisasi Penggunaan Dana BOSP" class="absolute inset-0 w-full h-full object-cover">
+                <img src="picture/spandukmtq.png" alt="Rekapitulasi Realisasi Penggunaan Dana BOSP" class="absolute inset-0 w-full h-full object-cover">
                 <!-- Efek gradasi hitam transparan (hanya terlihat di mobile agar gambar lebih dramatis) -->
                 <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent md:hidden"></div>
             </div>
@@ -142,24 +142,22 @@ mampu berkompetisi di dunia global.
                 </div>
                 
                 <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 mb-4 leading-tight hover:text-blue-600 transition-colors cursor-pointer">
-                    Wujudkan Transparansi, SMKN 1 Jatiroto Laporkan Realisasi Penggunaan Dana BOSP Tahap 1 Tahun 2026
+                    Jawa Tengah Siap Sukseskan MTQ Nasional XXXI 2026 di Semarang: Dinas Pendidikan Ajak Seluruh Satuan Pendidikan Berperan Aktif
                 </h2>
                 
                 <!-- line-clamp-3 digunakan agar teks terpotong otomatis jika terlalu panjang -->
                 <p class="text-gray-500 text-base mb-8 leading-relaxed line-clamp-3">
-                    WONOGIRI – Sebagai bentuk komitmen terhadap transparansi dan akuntabilitas pengelolaan keuangan sekolah (Why), SMK Negeri 1 Jatiroto, Kabupaten Wonogiri (Who/Where) telah melaporkan Dokumen Rekapitulasi Realisasi Penggunaan Dana Bantuan Operasional Satuan Pendidikan (BOSP) Reguler Tahap 1 Tahun Anggaran 2026 (What). Laporan keuangan ini mencakup pencatatan operasional sekolah selama periode semester pertama, yakni dari tanggal 1 Januari 2026 hingga 30 Juni 2026 (When).
+                    SEMARANG — Provinsi Jawa Tengah resmi menjadi tuan rumah penyelenggaraan Musabaqah Tilawatil Qur'an (MTQ) Tingkat Nasional XXXI Tahun 2026. Perhelatan akbar tingkat nasional ini dipusatkan di Kota Semarang pada tanggal 11 s.d. 20 September 2026 dengan mengusung tema “Menebar Cahaya Al-Qur’an Dalam Harmoni Menuju Indonesia Emas Yang Berkeadaban”
+                    <br>
 
-                    Berdasarkan dokumen resmi yang telah ditandatangani oleh Kepala SMKN 1 Jatiroto, Suhari, S.Pd., M.Pd., beserta Bendahara Kegiatan, Indrayati, S.Pd., M.Ak. tersebut (Who), total penerimaan dana BOSP pada periode ini tercatat sebesar Rp 795.145.000. Dari jumlah tersebut, sekolah telah merealisasikan atau menggunakan dana sebesar Rp 650.890.250 untuk menunjang berbagai kegiatan pendidikan, sehingga menyisakan saldo akhir periode sebesar Rp 144.254.750 (What/How).
-
-                    Adapun rincian penggunaan anggaran secara terstruktur dialokasikan untuk memenuhi delapan Standar Nasional Pendidikan (How). Serapan anggaran tertinggi dialokasikan pada Standar Proses dengan total mencapai Rp 194.416.800. Anggaran pada standar ini paling banyak dikucurkan untuk pembiayaan pelaksanaan kegiatan pembelajaran dan ekstrakurikuler siswa yang menelan dana sebesar Rp 152.977.500.
-
-                    Selain Standar Proses, alokasi anggaran yang cukup besar juga disalurkan pada Standar Pengelolaan yang mencapai angka Rp 183.165.150, di mana sebagian besarnya digunakan untuk pelaksanaan administrasi kegiatan sekolah (Rp 118.825.150) serta pembiayaan langganan daya dan jasa (Rp 64.340.000). Untuk memastikan kenyamanan belajar siswa, SMKN 1 Jatiroto juga memaksimalkan Standar Sarana dan Prasarana dengan anggaran Rp 166.922.750, yang secara spesifik difokuskan pada pemeliharaan sarana prasarana sekolah dan penyediaan alat multimedia pembelajaran (How).
-
-                    Pelaporan secara terperinci ini bersumber dari anggaran BOS Reguler Revisi Anggaran Ke-2. Dengan dirilisnya rekapitulasi ini, pihak sekolah berharap dapat terus memberikan pelayanan pendidikan dan peningkatan kompetensi keahlian yang maksimal, sekaligus menjaga kepercayaan masyarakat melalui pengelolaan dana operasional sekolah yang tepat sasaran, akuntabel, dan transparan.
+                   Menindaklanjuti arahan Sekretaris Daerah Provinsi Jawa Tengah, Kepala Dinas Pendidikan Provinsi Jawa Tengah, Dr. Sadimin, S.Pd., S.Sos., S.IPem., M.Eng., meminta seluruh jajaran Cabang Dinas Pendidikan Wilayah I s.d. XII, Balai Pengembangan Mutu Pembelajaran dan Teknologi Pendidikan, serta Kepala Sekolah SMA, SMK, dan SLB se-Jawa Tengah untuk turut menyemarakkan dan mendukung penuh publikasi kegiatan ini.
+                   <br>
+                  Bentuk Dukungan & Partisipasi Sekolah/Satuan Pendidikan:
+                   
                 </p>
                 
                 <div>
-                    <a href="page/detailberita.php" class="inline-flex items-center justify-center bg-blue-600 text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-md shadow-blue-200 hover:bg-blue-700 hover:-translate-y-0.5 transition-all">
+                    <a href="page/mtq.php" class="inline-flex items-center justify-center bg-blue-600 text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-md shadow-blue-200 hover:bg-blue-700 hover:-translate-y-0.5 transition-all">
                         Baca Selengkapnya
                         <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                     </a>
@@ -325,6 +323,18 @@ mampu berkompetisi di dunia global.
         <div class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-8 pt-2 no-scrollbar md:px-4" id="prestasi-scroll">
             
             <!-- Item 1 -->
+                <div class="min-w-[280px] w-[75vw] md:w-[350px] bg-white shadow-sm border border-gray-100 rounded-[1.5rem] p-5 snap-center shrink-0 app-card">
+                <div class="h-32 bg-yellow-50 rounded-xl mb-4 flex items-center justify-center text-yellow-500">
+                    <img src="picture/foto1.jpeg" class="w-full h-full" alt="">
+                   
+                </div>
+                <span class="text-xs font-bold text-yellow-600 uppercase tracking-wider">Dokumen rekapitulasi realisasi penggunaan dana BOSP Tahap 1 Tahun 2026.</span>
+                <h4 class="text-gray-900 font-bold text-lg mt-1 leading-tight">Wujudkan Transparansi, SMKN 1 Jatiroto Laporkan Realisasi Penggunaan Dana BOSP Tahap 1 Tahun 2026</h4>
+                <div class="mt-2 p-2 flex justify-center text-sm w-full ">
+                    <a href="page/detailberita.php" class="p-2 rounded-full bg-blue-700 hover:bg-blue-600 active:bg-blue-800 text-gray-200 w-full text-center">Selengkapnya</a>
+                </div>
+            </div>
+
             <div class="min-w-[280px] w-[75vw] md:w-[350px] bg-white shadow-sm border border-gray-100 rounded-[1.5rem] p-5 snap-center shrink-0 app-card">
                 <div class="h-32 bg-yellow-50 rounded-xl mb-4 flex items-center justify-center text-yellow-500">
                     <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
