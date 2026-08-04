@@ -1,0 +1,617 @@
+@extends('template.landingpage')
+@section('title', 'Selamat Datang')
+@section('main')
+
+    <!-- Top Navigation -->
+    <nav class="bg-white border-b border-gray-300 fixed w-full top-0 z-50">
+        <div class="max-w-[975px] mx-auto px-4 h-14 md:h-16 flex items-center justify-between">
+            <!-- Logo & Brand -->
+            <div class="flex items-center gap-2 cursor-pointer">
+                <img src="{{ asset('storage/img/logo-skanja.png') }}" alt="Logo Skanja"
+                    class="w-8 h-8 rounded-full object-cover border border-gray-200">
+                <span class="text-xl font-semibold tracking-wide"
+                    style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">SMK
+                    Negeri 1 Jatiroto</span>
+            </div>
+
+            <!-- Search Bar (Desktop Only) -->
+            <div class="hidden md:block relative w-[268px]">
+                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <i class="fas fa-search text-gray-400 text-sm"></i>
+                </div>
+                <input type="text" class="bg-[#efefef] w-full rounded-md py-1.5 pl-9 pr-3 text-sm focus:outline-none"
+                    placeholder="Cari berita....">
+            </div>
+
+            <!-- Nav Icons (Desktop) -->
+            <div class="hidden md:flex items-center space-x-6 text-2xl text-gray-800">
+                <i class="fas fa-home cursor-pointer"></i>
+                <i class="fab fa-facebook-messenger cursor-pointer"></i>
+                <i class="far fa-plus-square cursor-pointer"></i>
+                <i class="far fa-compass cursor-pointer"></i>
+                <i class="far fa-heart cursor-pointer"></i>
+                <img src="img/logo-skanja.png" alt="Profile"
+                    class="w-7 h-7 rounded-full object-cover border border-gray-300 cursor-pointer">
+            </div>
+
+            <!-- Mobile Only Icons -->
+            <div class="md:hidden flex items-center space-x-4 text-xl">
+                <i class="far fa-heart cursor-pointer"></i>
+                <i class="fab fa-facebook-messenger cursor-pointer"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-[975px] mx-auto flex flex-col md:flex-row gap-8 px-0 md:px-4">
+
+        <!-- Kolom Kiri / Utama -->
+        <div class="w-full md:w-[614px] flex-shrink-0">
+
+            <!-- Profile Header -->
+            <header class="flex items-start md:items-center gap-4 md:gap-10 mb-6 md:mb-10 px-4 md:px-0 pt-4 md:pt-0">
+                <div class="w-20 h-20 md:w-36 md:h-36 flex-shrink-0 cursor-pointer relative">
+                    <!-- Lingkaran Story di Profile -->
+                    <div class="absolute -inset-1 bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-500 rounded-full">
+                    </div>
+                    <img src="img/logo-skanja.png" alt="SMK Negeri 1 Jatiroto"
+                        class="relative w-full h-full rounded-full object-cover border-4 border-[#fafafa]">
+                </div>
+                <div class="flex-1">
+                    <div class="flex flex-col md:flex-row md:items-center gap-3 md:gap-6 mb-3 md:mb-4">
+                        <h1 class="text-xl md:text-[28px] font-light">SMKN1JATIROTO</h1>
+                        <div class="flex gap-2">
+                            <form action="https://maps.app.goo.gl/6QbSPtPHrKQ7AkPM6" method="get">
+                                <button
+                                    class="bg-[#0095f6] hover:bg-blue-600 text-white text-sm font-semibold py-1.5 px-4 rounded-md"><i
+                                        class="fa-solid fa-location-dot"></i> LOKASI</button>
+                            </form>
+                            <button
+                                class="bg-[#efefef] hover:bg-gray-200 text-gray-900 text-sm font-semibold py-1.5 px-4 rounded-md"><i
+                                    class="fa-solid fa-envelope"></i> Pesan</button>
+                        </div>
+                    </div>
+                    <div class="hidden md:flex gap-10 mb-4">
+                        <span class="text-base"><span class="font-semibold">10</span> postingan</span>
+                        <span class="text-base">
+                            <Guru href="" class="font-semibold text-blue-500 hover:underline">70 Guru</a>
+                        </span>
+                        <span class="text-base"><a href="" class="font-semibold text-blue-500 hover:underline">7 Tenaga Pendidik </a> </span>
+                    </div>
+                    <div class="text-sm">
+                        <h2 class="font-semibold">SMK Negeri 1 Jatiroto</h2>
+                        <p class="text-gray-500 mb-1">Sekolah Menengah Kejuruan</p>
+                        <p>📍 Jl. Raya Jatiroto - Wonogiri. Kab. Wonogiri, Jawa Tengah, Indonesia.</p>
+                        <p class="mb-1">🎓 Kompetensi Keahlian: <br></p>
+                        <ul class="list-disc pl-5">
+                            <li>TO (Teknik Otomotif)</li>
+                            <li>AKL (Akuntansi Keuangan Lembaga)</li>
+                            <li>PPLG (Pengembangan Perangkat Lunak dan Gim)</li>
+                        </ul>
+
+                        <p class="font-semibold mt-2">Sambutan Kepala Sekolah:</p>
+                        <p class="italic">"Terwujudnya tamatan yang berkarakter, terampil, menguasai ilmu pengetahuan dan
+                            teknologi serta mampu berkompetisi di dunia global." - Suhari, S.Pd.,M.Pd.</p>
+                        <a href="#" class="text-[#00376b] font-semibold">www.smkn1jatiroto.sch.id</a>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Highlights (Jurusan & Ekstrakurikuler) -->
+            <div class="flex gap-4 overflow-x-auto no-scrollbar mb-8 px-4 md:px-0 pb-4 border-b border-gray-300"
+                id="highlights">
+                <!-- Data Highlights di-generate via JS -->
+            </div>
+
+            <!-- Feed / Posts Grid Icons (Desktop Only) -->
+            <div class="hidden md:flex justify-center border-t border-gray-300 mb-4">
+                <div class="flex space-x-14">
+                    <button
+                        class="py-4 border-t border-gray-800 text-xs font-semibold flex items-center gap-2 tracking-widest text-gray-900"><i
+                            class="fas fa-th"></i> POSTINGAN</button>
+                    <button class="py-4 text-gray-400 text-xs font-semibold flex items-center gap-2 tracking-widest"><i
+                            class="fas fa-play"></i> SKANJATV</button>
+                </div>
+            </div>
+
+            <!-- Feed Berita (Infinity Scroll) -->
+            <div id="feed-container" class="flex flex-col gap-0 md:gap-6">
+                <!-- Postingan akan masuk kesini dari JavaScript -->
+            </div>
+
+            <!-- Loading Spinner untuk Infinity Scroll -->
+            <div id="loading" class="text-center py-6 hidden">
+                <i class="fas fa-spinner fa-spin text-gray-400 text-3xl"></i>
+            </div>
+        </div>
+
+        <!-- Kolom Kanan (Sidebar Headline, Paling Banyak Dibaca, Footer) -->
+        <div class="hidden md:block w-[319px] pt-8">
+            <!-- Kepsek Account Mini -->
+            <div class="flex items-center justify-between mb-8">
+                <div class="flex items-center gap-4 cursor-pointer">
+                    <img src="logo-skanja.jpg" alt="Kepsek" class="w-14 h-14 rounded-full border border-gray-200">
+                    <div>
+                        <p class="text-sm font-semibold hover:underline">suhari_kepsek</p>
+                        <p class="text-sm text-gray-500">Suhari, S.Pd.,M.Pd.</p>
+                    </div>
+                </div>
+                <button class="text-xs text-[#0095f6] font-semibold hover:text-blue-900">Lihat</button>
+            </div>
+
+            <!-- Headline Berita Terbaru -->
+            <div class="mb-6">
+                <div class="flex justify-between text-sm mb-4">
+                    <span class="font-semibold text-gray-500">Berita Headline Terbaru</span>
+                    <a href="#" class="text-gray-900 font-semibold hover:opacity-50">Semua</a>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center text-white text-[10px] font-bold shadow">
+                            NEW</div>
+                        <div class="flex-1">
+                            <p class="text-sm font-semibold hover:underline cursor-pointer line-clamp-2 leading-tight">
+                                Pendaftaran PPDB SMK N 1 Jatiroto 2026/2027 Resmi Dibuka!</p>
+                            <p class="text-xs text-gray-500 mt-1">2 Jam yang lalu</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white text-[10px] font-bold shadow">
+                            INFO</div>
+                        <div class="flex-1">
+                            <p class="text-sm font-semibold hover:underline cursor-pointer line-clamp-2 leading-tight">
+                                Persiapan Ujian Kompetensi Keahlian (UKK) Kelas XII.</p>
+                            <p class="text-xs text-gray-500 mt-1">1 Hari yang lalu</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Berita Paling Banyak Dibaca -->
+            <div class="mb-6">
+                <div class="flex justify-between text-sm mb-4">
+                    <span class="font-semibold text-gray-500">Paling Banyak Dibaca</span>
+                </div>
+                <ul class="text-sm space-y-4">
+                    <li class="flex items-start gap-3 cursor-pointer group">
+                        <span class="font-bold text-gray-300 text-lg leading-none">1</span>
+                        <p class="group-hover:underline text-gray-800 leading-tight">Siswa PPLG SMK N 1 Jatiroto Kembangkan
+                            Aplikasi Kasir Cerdas.</p>
+                    </li>
+                    <li class="flex items-start gap-3 cursor-pointer group">
+                        <span class="font-bold text-gray-300 text-lg leading-none">2</span>
+                        <p class="group-hover:underline text-gray-800 leading-tight">Tim Teknik Otomotif (TO) Skanja Juara
+                            1 Lomba Modifikasi Mesin se-Jateng.</p>
+                    </li>
+                    <li class="flex items-start gap-3 cursor-pointer group">
+                        <span class="font-bold text-gray-300 text-lg leading-none">3</span>
+                        <p class="group-hover:underline text-gray-800 leading-tight">Laporan Keuangan Bank Mini AKL Tembus
+                            Omset Tertinggi Tahun Ini.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Footer -->
+            <div class="text-[12px] text-[#c7c7c7] mt-8">
+                <ul class="flex flex-wrap gap-x-2 gap-y-1 mb-4">
+                    <li><a href="#" class="hover:underline">Tentang</a></li>
+                    <li>•</li>
+                    <li><a href="#" class="hover:underline">Bantuan</a></li>
+                    <li>•</li>
+                    <li><a href="#" class="hover:underline">Pers</a></li>
+                    <li>•</li>
+                    <li><a href="#" class="hover:underline">API</a></li>
+                    <li>•</li>
+                    <li><a href="#" class="hover:underline">Pekerjaan</a></li>
+                    <li>•</li>
+                    <li><a href="#" class="hover:underline">Privasi</a></li>
+                    <li>•</li>
+                    <li><a href="#" class="hover:underline">Ketentuan</a></li>
+                    <li>•</li>
+                    <li><a href="#" class="hover:underline">Lokasi</a></li>
+                </ul>
+                <p>© 2026 SMK NEGERI 1 JATIROTO</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Mobile Bottom Navigation -->
+    <div
+        class="md:hidden fixed bottom-0 w-full bg-white border-t border-gray-300 flex justify-around items-center h-12 text-2xl z-50">
+        <i class="fas fa-home text-gray-900"></i>
+        <i class="fas fa-search text-gray-400"></i>
+        <i class="far fa-play-circle text-gray-400"></i>
+        <i class="far fa-shopping-bag text-gray-400"></i>
+        <img src="logo-skanja.jpg" alt="Profile" class="w-6 h-6 rounded-full object-cover border border-gray-300">
+    </div>
+@endsection
+@section('js')
+    <script>
+        // 1. Data Ekstrakurikuler & Jurusan (Highlights)
+        const highlightsData = [{
+                name: "T. Otomotif",
+                icon: "🚗"
+            },
+            {
+                name: "Akuntansi",
+                icon: "📊"
+            },
+            {
+                name: "PPLG",
+                icon: "💻"
+            },
+            {
+                name: "Pramuka",
+                icon: "🏕️"
+            },
+            {
+                name: "Rohis",
+                icon: "🕌"
+            },
+            {
+                name: "Badminton",
+                icon: "🏸"
+            },
+            {
+                name: "PMR",
+                icon: "🚑"
+            },
+            {
+                name: "Paskibra",
+                icon: "🇮🇩"
+            },
+            {
+                name: "Drumband",
+                icon: "🥁"
+            },
+            {
+                name: "TechnoArt",
+                icon: "🎨"
+            },
+            {
+                name: "SkanjaTV",
+                icon: "📺"
+            },
+            {
+                name: "Band",
+                icon: "🎸"
+            },
+            {
+                name: "Padus",
+                icon: "🎤"
+            },
+        ];
+
+        const highlightContainer = document.getElementById('highlights');
+        highlightsData.forEach(item => {
+            const el = document.createElement('div');
+            el.className = 'flex flex-col items-center gap-2 cursor-pointer w-[70px] md:w-20 flex-shrink-0';
+            el.innerHTML = `
+                <div class="w-[60px] h-[60px] md:w-[66px] md:h-[66px] rounded-full bg-[#dbdbdb] p-[2px]">
+                    <div class="w-full h-full bg-white rounded-full border border-white flex items-center justify-center text-2xl bg-gray-100">
+                        ${item.icon}
+                    </div>
+                </div>
+                <span class="text-xs truncate w-full text-center text-gray-800">${item.name}</span>
+            `;
+            highlightContainer.appendChild(el);
+        });
+
+        // 2. Data Dummy API 10 Berita (ditambah property 'comments' sebagai sample data)
+        const postsData = [{
+                id: 1,
+                author: "suhari_kepsek",
+                role: "Kepala Sekolah",
+                img: "bg-gray-200",
+                content: "Apel pagi bersama seluruh siswa dan guru. Mari tingkatkan kedisiplinan dan semangat belajar di awal semester ini! Jangan lupa jaga kebersihan lingkungan sekolah. #SkanjaBisa #SMKHebat #Jatiroto",
+                likes: "1,245",
+                time: "2 JAM YANG LALU",
+                comments: [{
+                        user: "osis_skanja",
+                        text: "Siap laksanakan Bapak! Semangat pagi! 🔥"
+                    },
+                    {
+                        user: "guru_budi_produktif",
+                        text: "Mantap, mari kita tingkatkan kedisiplinan anak-anak."
+                    },
+                    {
+                        user: "alumni_skanja21",
+                        text: "Kangen masa-masa apel pagi di sekolah tercinta 🥺"
+                    }
+                ]
+            },
+            {
+                id: 2,
+                author: "jurusan_to_skanja",
+                role: "Teknik Otomotif",
+                img: "bg-gray-300",
+                content: "Praktek Overhaul Mesin Kendaraan Ringan oleh siswa kelas XII TO. Semangat calon mekanik handal! Lulusan TO siap kerja dan wirausaha. 🔧🚗",
+                likes: "889",
+                time: "5 JAM YANG LALU",
+                comments: [{
+                        user: "bengkel_jaya_motor",
+                        text: "Wah siap nampung lulusan Skanja nih, skillnya udah teruji 👍"
+                    },
+                    {
+                        user: "agus_siswa_to",
+                        text: "Kelompok 2 besok siap praktek pak! 🛠️"
+                    }
+                ]
+            },
+            {
+                id: 3,
+                author: "waka_kesiswaan",
+                role: "Wakil Kepala Sekolah",
+                img: "bg-gray-200",
+                content: "Pengumuman untuk seluruh siswa/i. Pendaftaran Ekstrakurikuler Wajib dan Pilihan telah dibuka. Pastikan kalian memilih yang sesuai dengan minat dan bakat kalian ya!",
+                likes: "512",
+                time: "1 HARI YANG LALU",
+                comments: [{
+                        user: "pramuka_skanja",
+                        text: "Mari bergabung bersama ambalan kami kakak-kakak! 🏕️"
+                    },
+                    {
+                        user: "siswa_baru01",
+                        text: "Pak, maksimal boleh ikut berapa ekstrakurikuler pilihan?"
+                    }
+                ]
+            },
+            {
+                id: 4,
+                author: "pplg.skanja",
+                role: "Pengembangan Perangkat Lunak & Gim",
+                img: "bg-gray-300",
+                content: "Showcase proyek akhir pembuatan Game 2D dan Website Sekolah karya siswa kelas XI PPLG. Bangga melihat perkembangan skill coding mereka! 💻🎮 Siap jadi programmer masa depan.",
+                likes: "1,020",
+                time: "2 HARI YANG LALU",
+                comments: [{
+                        user: "indie_dev_id",
+                        text: "Keren banget anak SMK udah bisa bikin game 2D yang se-smooth ini."
+                    },
+                    {
+                        user: "desi_coder",
+                        text: "Semangat tim! Bangga banget hasil begadang kita akhirnya rilis 😭💻"
+                    }
+                ]
+            },
+            {
+                id: 5,
+                author: "osis_skanja",
+                role: "Siswa / OSIS",
+                img: "bg-gray-200",
+                content: "Rapat koordinasi persiapan event Pensi (Pentas Seni) Skanja 2026. Stay tuned untuk kejutan bintang tamu tahun ini! 🎉 Tunggu info selanjutnya ya guys. #SkanjaFest",
+                likes: "1,512",
+                time: "2 HARI YANG LALU",
+                comments: [{
+                        user: "skanja_hits",
+                        text: "Semoga tahun ini bisa undang band nasional min! 🙏"
+                    },
+                    {
+                        user: "ari_musik",
+                        text: "Ekskul Band siap tampil mengisi acara pembuka!"
+                    }
+                ]
+            },
+            // Data untuk di-load saat scroll (5 berita selanjutnya)
+            {
+                id: 6,
+                author: "akl_skanja_official",
+                role: "Akuntansi & Keuangan Lembaga",
+                img: "bg-gray-300",
+                content: "Pelatihan pembukuan digital menggunakan software MYOB standar industri. Lulusan AKL tidak cuma jago menghitung tapi juga melek teknologi! 📊💰",
+                likes: "775",
+                time: "3 HARI YANG LALU",
+                comments: [{
+                    user: "putri_akl",
+                    text: "Agak pusing awalnya tapi seru pas udah balance! 🤣"
+                }]
+            },
+            {
+                id: 7,
+                author: "guru_budi_produktif",
+                role: "Guru",
+                img: "bg-gray-200",
+                content: "Kunjungan industri ke pabrik perakitan mobil berskala nasional. Memberikan wawasan dunia kerja nyata kepada siswa. Terima kasih atas sambutannya. 🏭",
+                likes: "898",
+                time: "4 HARI YANG LALU",
+                comments: []
+            },
+            {
+                id: 8,
+                author: "skanjatv",
+                role: "Ekstrakurikuler",
+                img: "bg-gray-300",
+                content: "Sedang berlangsung proses shooting film pendek dokumenter profil sekolah oleh tim SkanjaTV. Nantikan penayangannya di channel YouTube resmi kami! 🎥🎬",
+                likes: "1,341",
+                time: "5 HARI YANG LALU",
+                comments: [{
+                    user: "cameraman_skanja",
+                    text: "Cuacanya sangat mendukung hari ini ☀️"
+                }]
+            },
+            {
+                id: 9,
+                author: "pramuka_skanja",
+                role: "Ekstrakurikuler",
+                img: "bg-gray-200",
+                content: "Kegiatan Perkemahan Penerimaan Tamu Ambalan (PTA) berjalan dengan lancar. Pramuka Skanja tangguh, mandiri, dan berani. Satyaku Kudarmakan, Darmaku Kubaktikan. 🏕️🔥",
+                likes: "902",
+                time: "1 MINGGU YANG LALU",
+                comments: [{
+                    user: "suhari_kepsek",
+                    text: "Luar biasa, tingkatkan terus jiwa kepemimpinan kalian."
+                }]
+            },
+            {
+                id: 10,
+                author: "waka_kurikulum",
+                role: "Wakil Kepala Sekolah",
+                img: "bg-gray-300",
+                content: "Jadwal Penilaian Tengah Semester (PTS) Genap sudah rilis. Bisa diunduh melalui website resmi atau grup kelas masing-masing. Tetap jaga kesehatan dan selamat belajar! 📚📝",
+                likes: "1,215",
+                time: "1 MINGGU YANG LALU",
+                comments: [{
+                    user: "siswa_sambat",
+                    text: "Wah udah PTS lagi aja perasaaan baru kemaren libur 😅"
+                }]
+            }
+        ];
+
+        let currentIndex = 0;
+        const itemsPerLoad = 5; // Load 5 data per scroll
+        const feedContainer = document.getElementById('feed-container');
+        const loadingIndicator = document.getElementById('loading');
+        let isLoading = false;
+
+        // Fungsi Render HTML Post
+        function createPostHTML(post) {
+            // 1. LOGIKA SELENGKAPNYA (READ MORE)
+            const maxLength = 100; // Batas karakter sebelum dipotong
+            let captionHTML = '';
+
+            if (post.content.length > maxLength) {
+                // Memotong teks jika terlalu panjang
+                const shortCaption = post.content.substring(0, maxLength);
+
+                captionHTML = `
+                    <span class="short-caption">
+                        ${shortCaption}...
+                        <span onclick="this.parentElement.style.display='none'; this.parentElement.nextElementSibling.style.display='inline';" class="text-gray-500 cursor-pointer hover:text-gray-700 ml-1">selengkapnya</span>
+                    </span>
+                    <span class="full-caption" style="display: none;">
+                        ${post.content}
+                    </span>
+                `;
+            } else {
+                // Jika teks pendek, tampilkan utuh
+                captionHTML = `<span>${post.content}</span>`;
+            }
+
+            // 2. LOGIKA RENDER KOMENTAR (TOGGLE)
+            let commentsCount = post.comments ? post.comments.length : 0;
+            let commentsSectionHTML = '';
+
+            if (commentsCount > 0) {
+                // Render list komentar
+                let commentsList = post.comments.map(c => `
+                    <div class="mb-2 text-sm flex justify-between items-start">
+                        <p class="leading-tight">
+                            <span class="font-semibold cursor-pointer mr-1 text-gray-900 hover:text-gray-500">${c.user}</span>
+                            <span class="text-gray-800">${c.text}</span>
+                        </p>
+                        <i class="far fa-heart text-xs text-gray-400 cursor-pointer mt-1 ml-3 hover:text-red-500"></i>
+                    </div>
+                `).join('');
+
+                // Tombol "Lihat komentar" dan Kontainer komentar (hidden by default)
+                commentsSectionHTML = `
+                    <p class="text-gray-500 cursor-pointer mt-1 hover:underline" onclick="this.nextElementSibling.classList.toggle('hidden');">
+                        Lihat semua ${commentsCount} komentar
+                    </p>
+                    <div class="comments-container hidden mt-2 bg-[#f9f9f9] p-3 rounded-md border border-gray-100">
+                        ${commentsList}
+                    </div>
+                `;
+            } else {
+                // Jika tidak ada komentar
+                commentsSectionHTML = `
+                    <p class="text-gray-400 text-[12px] mt-1 italic">Belum ada komentar.</p>
+                `;
+            }
+
+            return `
+                <article class="bg-white md:border md:border-gray-300 md:rounded-[8px] mb-2 md:mb-0 border-b border-gray-200 pb-2 md:pb-0">
+                    <!-- Header Post -->
+                    <div class="flex items-center justify-between p-3 md:p-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-yellow-400 to-purple-500 p-[1.5px] cursor-pointer">
+                                <img src="logo-skanja.jpg" class="w-full h-full rounded-full border border-white object-cover">
+                            </div>
+                            <div>
+                                <h2 class="text-sm font-semibold hover:text-gray-500 cursor-pointer flex items-center gap-1">
+                                    ${post.author} <i class="fas fa-check-circle text-blue-500 text-[10px]"></i>
+                                </h2>
+                                <p class="text-[11px] text-gray-500">${post.role}</p>
+                            </div>
+                        </div>
+                        <i class="fas fa-ellipsis-h text-gray-900 cursor-pointer"></i>
+                    </div>
+
+                    <!-- Image Post (Kotak abu-abu dg logo Skanja ditengah sbg placeholder) -->
+                    <div class="w-full aspect-square ${post.img} flex flex-col items-center justify-center relative overflow-hidden">
+                        <img src="logo-skanja.jpg" class="absolute w-[50%] opacity-10">
+                        <i class="far fa-image text-4xl text-gray-400 z-10 mb-2"></i>
+                        <p class="text-gray-500 font-semibold text-sm z-10">Visual Konten dari ${post.author}</p>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="px-3 md:px-4 pt-3 pb-1 flex justify-between items-center text-2xl text-gray-900">
+                        <div class="flex gap-4">
+                            <i class="far fa-heart hover:text-gray-500 cursor-pointer"></i>
+                            <i class="far fa-comment hover:text-gray-500 cursor-pointer"></i>
+                            <i class="far fa-paper-plane hover:text-gray-500 cursor-pointer"></i>
+                        </div>
+                        <i class="far fa-bookmark hover:text-gray-500 cursor-pointer"></i>
+                    </div>
+
+                    <!-- Likes & Caption & Comments -->
+                    <div class="px-3 md:px-4 pb-4 text-sm">
+                        <p class="font-semibold mb-1">${post.likes} suka</p>
+
+                        <!-- Caption dengan Selengkapnya -->
+                        <p class="mb-1">
+                            <span class="font-semibold cursor-pointer mr-1">${post.author}</span>
+                            ${captionHTML}
+                        </p>
+
+                        <!-- Section Komentar Expand/Collapse -->
+                        ${commentsSectionHTML}
+
+                        <p class="text-[10px] text-gray-400 font-semibold tracking-wide mt-2">${post.time}</p>
+                    </div>
+
+                    <!-- Add Comment (Desktop Only) -->
+                    <div class="hidden md:flex border-t border-gray-200 p-4 items-center gap-3">
+                        <i class="far fa-smile text-2xl text-gray-900"></i>
+                        <input type="text" placeholder="Tambahkan komentar..." class="w-full text-sm outline-none">
+                        <button class="text-[#0095f6] text-sm font-semibold opacity-50 cursor-default hover:opacity-100 transition-opacity">Kirim</button>
+                    </div>
+                </article>
+            `;
+        }
+
+        // Fungsi Load API Infinity Scroll
+        function loadPosts() {
+            // Stop jika data sudah habis atau proses sedang jalan
+            if (currentIndex >= postsData.length || isLoading) return;
+
+            isLoading = true;
+            loadingIndicator.classList.remove('hidden');
+
+            // Simulasi Delay Loading (1.5 detik) agar terlihat efek loading
+            setTimeout(() => {
+                const limit = currentIndex + itemsPerLoad;
+                for (let i = currentIndex; i < limit && i < postsData.length; i++) {
+                    const postHTML = createPostHTML(postsData[i]);
+                    feedContainer.insertAdjacentHTML('beforeend', postHTML);
+                }
+                currentIndex += itemsPerLoad;
+                isLoading = false;
+                loadingIndicator.classList.add('hidden');
+            }, 1500);
+        }
+
+        // Listener Scroll untuk memicu fungsi penambahan data
+        window.addEventListener('scroll', () => {
+            // Jika user scroll mendekati 300px dari bawah halaman
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 300) {
+                loadPosts();
+            }
+        });
+
+        // Load 5 Berita Awal saat pertama kali dibuka
+        loadPosts();
+    </script>
+@endsection
