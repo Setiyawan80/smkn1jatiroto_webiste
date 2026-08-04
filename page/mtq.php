@@ -18,7 +18,7 @@
 Mengusung tema:
 "Menebar Cahaya Al-Qur'an Dalam Harmoni Menuju Indonesia Emas Yang Berkeadaban"">
     <!-- PENTING: Untuk gambar WhatsApp, SANGAT DISARANKAN menggunakan URL penuh (Absolute URL) seperti di bawah ini, bukan ../picture/foto1.jpeg -->
-    <meta property="og:image" content="https://smkn1jatirotowonogiri.sch.id/picture/foto1.jpeg"> 
+    <meta property="og:image" content="https://smkn1jatirotowonogiri.sch.id/picture/spandukmtq.png"> 
 
     <!-- ========================================== -->
     <!-- META TAGS UNTUK SHARE TWITTER / X          -->
