@@ -12,9 +12,11 @@
     <!-- META TAGS UNTUK SHARE WHATSAPP & FACEBOOK  -->
     <!-- ========================================== -->
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://smkn1jatirotowonogiri.sch.id/berita/bosp-2026.html"> <!-- Ganti dengan URL asli halaman ini -->
-    <meta property="og:title" content="Realisasi Dana BOSP Tahap 1 Tahun 2026 - SMKN 1 Jatiroto">
-    <meta property="og:description" content="Sebagai bentuk transparansi, SMKN 1 Jatiroto melaporkan rekapitulasi realisasi penggunaan Dana BOSP Tahap 1 Tahun 2026. Lihat detail selengkapnya.">
+    <meta property="og:url" content="https://www.smkn1jatirotowonogiri.sch.id/page/mtq.php"> <!-- Ganti dengan URL asli halaman ini -->
+    <meta property="og:title" content="Jawa Tengah Siap Sukseskan MTQ Nasional XXXI 2026 di Semarang: Dinas Pendidikan Ajak Seluruh Satuan Pendidikan Berperan Aktif">
+    <meta property="og:description" content="Mari bersama kita sukseskan Musabaqah Tilawatil Qur'an (MTQ) Tingkat Nasional XXXI Tahun 2026 yang akan diselenggarakan di Kota Semarang pada tanggal 11 - 20 September 2026!
+Mengusung tema:
+"Menebar Cahaya Al-Qur'an Dalam Harmoni Menuju Indonesia Emas Yang Berkeadaban"">
     <!-- PENTING: Untuk gambar WhatsApp, SANGAT DISARANKAN menggunakan URL penuh (Absolute URL) seperti di bawah ini, bukan ../picture/foto1.jpeg -->
     <meta property="og:image" content="https://smkn1jatirotowonogiri.sch.id/picture/foto1.jpeg"> 
 
@@ -25,7 +27,7 @@
     <meta name="twitter:url" content="https://smkn1jatirotowonogiri.sch.id/berita/bosp-2026.html">
     <meta name="twitter:title" content="Realisasi Dana BOSP Tahap 1 Tahun 2026 - SMKN 1 Jatiroto">
     <meta name="twitter:description" content="Sebagai bentuk transparansi, SMKN 1 Jatiroto melaporkan rekapitulasi realisasi penggunaan Dana BOSP Tahap 1 Tahun 2026.">
-    <meta name="twitter:image" content="https://smkn1jatirotowonogiri.sch.id/picture/foto1.jpeg">
+    <meta name="twitter:image" content="https://smkn1jatirotowonogiri.sch.id/picture/spandukmtq.png">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
