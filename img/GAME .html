@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game: Labirin Navigasi HTML</title>
+    <style>
+        /* =========================================
+           CSS: Membuat Tampilan Menarik & Efek Game
+           ========================================= */
+        
+        /* Ini adalah KUNCI dari Single Page Navigation agar pergerakannya mulus (tidak kaku) */
+        html { 
+            scroll-behavior: smooth; 
+        }
+
+        body { 
+            margin: 0; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: #1a1a2e; 
+            color: #fff; 
+            overflow-x: hidden;
+            /* Menyembunyikan scrollbar agar terasa seperti game murni */
+            scrollbar-width: none; 
+        }
+        
+        body::-webkit-scrollbar { 
+            display: none; 
+        }
+
+        /* Setiap Ruangan dibuat setinggi layar penuh (100vh) */
+        section { 
+            min-height: 100vh; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            text-align: center; 
+            padding: 20px; 
+            box-sizing: border-box; 
+            border-bottom: 5px dashed #0f3460; 
+        }
+
+        h1 { 
+            font-size: 3.5rem; 
+            color: #e94560; 
+            text-shadow: 2px 4px 10px rgba(0,0,0,0.8); 
+            margin-bottom: 10px;
+        }
+
+        p { 
+            font-size: 1.3rem; 
+            max-width: 600px; 
+            line-height: 1.6; 
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* Styling untuk Tag <a> agar terlihat seperti tombol Game */
+        .btn { 
+            display: inline-block; 
+            padding: 15px 30px; 
+            margin: 15px; 
+            font-size: 1.2rem; 
+            font-weight: bold;
+            text-decoration: none; /* Menghilangkan garis bawah bawaan tag A */
+            color: white; 
+            background: #0f3460; 
+            border-radius: 8px; 
+            transition: all 0.3s ease; 
+            border: 2px solid #e94560; 
+            cursor: pointer;
+        }
+
+        .btn:hover { 
+            background: #e94560; 
+            transform: scale(1.1); 
+            box-shadow: 0 0 20px #e94560; 
+        }
+
+        /* Heads Up Display (HUD) untuk menampilkan langkah */
+        #hud { 
+            position: fixed; 
+            top: 20px; 
+            right: 20px; 
+            background: rgba(0,0,0,0.8); 
+            padding: 15px 25px; 
+            border-radius: 10px; 
+            font-size: 1.2rem;
+            font-weight: bold; 
+            z-index: 100; 
+            border: 2px solid #e94560;
+        }
+        
+        /* Warna Background Khusus Tiap Ruangan */
+        #ruang-awal { background: linear-gradient(to bottom, #1a1a2e, #16213e); }
+        #ruang-kiri { background: linear-gradient(to bottom, #4a1c40, #2d132c); }
+        #ruang-kanan { background: linear-gradient(to bottom, #1c4a3d, #132c25); }
+        #ruang-jebakan { background: linear-gradient(to bottom, #601515, #3a0a0a); }
+        #pintu-keluar { background: linear-gradient(to bottom, #15602a, #0a3a16); }
+    </style>
+</head>
+<body>
+    
+    <!-- UI Penghitung Langkah (Dikontrol dengan JavaScript) -->
+    <div id="hud">Langkah: <span id="langkah-count">0</span></div>
+
+    <!-- =========================================
+         HTML: Struktur Ruangan & Navigasi ID
+         ========================================= -->
+
+    <!-- RUANG AWAL -->
+    <section id="ruang-awal">
+        <h1>Ruang Dimensi Utama</h1>
+        <p>Kamu terjebak di dalam Labirin Kode. Untuk bisa keluar, kamu harus menelusuri portal yang tepat menggunakan sihir <b>href</b>. Di depanmu ada dua portal misterius.</p>
+        <div>
+            <!-- Menghubungkan tombol ke id="ruang-kiri" -->
+            <a href="#ruang-kiri" class="btn portal-link">Masuk Portal Merah</a>
+            
+            <!-- Menghubungkan tombol ke id="ruang-kanan" -->
+            <a href="#ruang-kanan" class="btn portal-link">Masuk Portal Biru</a>
+        </div>
+    </section>
+
+    <!-- RUANG KIRI -->
+    <section id="ruang-kiri">
+        <h1>Ruang Cermin Retak</h1>
+        <p>Ruangan ini dipenuhi cermin yang memantulkan bayangan monster. Ada suara aneh dari lantai bawah, tapi di sebelahmu ada pintu kembali.</p>
+        <div>
+            <a href="#ruang-jebakan" class="btn portal-link">Turun ke Bawah</a>
+            <a href="#ruang-awal" class="btn portal-link">Kembali ke Awal</a>
+        </div>
+    </section>
+
+    <!-- RUANG KANAN -->
+    <section id="ruang-kanan">
+        <h1>Perpustakaan Kuno</h1>
+        <p>Buku-buku beterbangan di udara! Di atas meja, ada sebuah buku bersinar yang menunjuk ke sebuah lorong rahasia.</p>
+        <div>
+            <a href="#ruang-jebakan" class="btn portal-link">Buka Buku Bersinar</a>
+            <a href="#pintu-keluar" class="btn portal-link">Lari ke Lorong Rahasia</a>
+        </div>
+    </section>
+
+    <!-- RUANG JEBAKAN -->
+    <section id="ruang-jebakan">
+        <h1>Jebakan Lubang Hitam! 💀</h1>
+        <p>Oh tidak! Kamu salah melangkah dan tersedot ke dalam ruang hampa. Semua usahamu sia-sia!</p>
+        <a href="#ruang-awal" class="btn portal-link reset-btn">Mulai Lagi dari Awal</a>
+    </section>
+
+    <!-- PINTU KELUAR -->
+    <section id="pintu-keluar">
+        <h1>Selamat! Kamu Lolos! 🎉</h1>
+        <p>Kamu telah berhasil memahami cara kerja tag <b>&lt;a&gt;</b> dan atribut <b>href="#id"</b> untuk berpindah halaman di dalam Single Page.</p>
+        <a href="#ruang-awal" class="btn portal-link reset-btn">Mainkan Lagi</a>
+    </section>
+
+    <!-- =========================================
+         JAVASCRIPT: Logika Game Sederhana
+         ========================================= -->
+    <script>
+        // Logika untuk menghitung berapa kali tag <a> diklik
+        let langkah = 0;
+        const displayLangkah = document.getElementById('langkah-count');
+        const semuaLink = document.querySelectorAll('.portal-link');
+        const tombolReset = document.querySelectorAll('.reset-btn');
+
+        // Menambahkan event saat setiap tombol portal diklik
+        semuaLink.forEach(link => {
+            link.addEventListener('click', function() {
+                langkah++;
+                displayLangkah.textContent = langkah;
+            });
+        });
+
+        // Menambahkan event khusus untuk tombol reset (kalah/menang)
+        tombolReset.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Memberi jeda waktu agar animasi scroll selesai dulu, baru di-reset
+                setTimeout(() => {
+                    langkah = 0;
+                    displayLangkah.textContent = langkah;
+                }, 800);
+            });
+        });
+    </script>
+</body>
+</html>
