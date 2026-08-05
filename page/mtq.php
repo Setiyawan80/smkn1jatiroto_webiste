@@ -3,7 +3,7 @@
 <head>
    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laporan Dana BOSP 2026 | SMK Negeri 1 Jatiroto</title>
+    <title>Publikasi MTQ Nasional XXXI 2026 | SMK Negeri 1 Jatiroto</title>
     
     <meta name="description" content="Sebagai bentuk transparansi, SMKN 1 Jatiroto melaporkan Dokumen Rekapitulasi Realisasi Penggunaan Dana BOSP Tahap 1 Tahun Anggaran 2026.">
     <link rel="icon" type="image/png" href="../img/logo-skanja.png">
